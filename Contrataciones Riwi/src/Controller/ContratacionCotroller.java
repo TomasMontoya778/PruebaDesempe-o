@@ -31,8 +31,10 @@ public class ContratacionCotroller {
                 JOptionPane.showMessageDialog(null, "No se pudo encontrar ningún ID de Coders.");
             }else {
                 Contratacion objContratacion = new Contratacion();
-                objContratacion.setEstado(objVacante.getEstado());
                 double salario = Double.parseDouble(JOptionPane.showInputDialog(null,"Ingrese el salario del Coder. (Ejm: 3,000000)"));
+                objContratacion.setEstado(objVacante.getEstado());
+                objContratacion.setSalario(salario);
+                objContratacion = (Contratacion) objContratacionModel.insert(objContratacion);
                 JOptionPane.showMessageDialog(null, objContratacion.toString());
             }
         }catch (NumberFormatException e){

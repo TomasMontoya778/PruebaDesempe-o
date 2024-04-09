@@ -8,12 +8,12 @@ public class Contratacion {
     private  int id_coderFK;
     private Timestamp fecha_aplicacion;
     private String estado;
-    private Double salario;
+    private double salario;
     public Contratacion (){
 
     }
 
-    public Contratacion(int id_contratacion, int id_vacanteFK, int id_coderFK, Timestamp fecha_aplicacion, String estado, Double salario) {
+    public Contratacion(int id_contratacion, int id_vacanteFK, int id_coderFK, Timestamp fecha_aplicacion, String estado, double salario) {
         this.id_contratacion = id_contratacion;
         this.id_vacanteFK = id_vacanteFK;
         this.id_coderFK = id_coderFK;
@@ -62,11 +62,11 @@ public class Contratacion {
         this.estado = estado;
     }
 
-    public Double getSalario() {
+    public double getSalario() {
         return salario;
     }
 
-    public void setSalario(Double salario) {
+    public void setSalario(double salario) {
         this.salario = salario;
     }
 

@@ -89,4 +89,5 @@ public class Vacante {
                 "\nEstado: " + estado
                 + id_empresaFK;
     }
+
 }

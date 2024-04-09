@@ -7,6 +7,7 @@ import Model.EmpresaModel;
 import Model.VacanteModel;
 
 import javax.swing.*;
+import java.util.Objects;
 
 public class VacanteController {
     public static void insertVacante(){
@@ -62,6 +63,20 @@ public class VacanteController {
         }
         return text;
     }
+    public static String listVacantesStringNEW() {
+        VacanteModel objVacanteModel = new VacanteModel();
+        String text = """
+                -------Listado de las Vacantes-------\n
+                """;
+        for (Object temp : objVacanteModel.readAll()) {
+            Vacante objVacante = (Vacante) temp;
+            if (Objects.equals(objVacante.getEstado(), "Activo")){
+                text += objVacante.toString() + "\n";
+            }
+        }
+        return text;
+    }
+
     public static void listVacantesByTecno(){
         VacanteModel objVacanteModel = new VacanteModel();
         String tecnologia =JOptionPane.showInputDialog(null, "Ingresa una tecnología de programación.");

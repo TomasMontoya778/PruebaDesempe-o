@@ -104,7 +104,7 @@ public class Main {
                                 VacanteController.updateVacante();
                                 break;
                             case "3":
-
+                                ContratacionCotroller.updateContratacion();
                                 break;
                         }
                     } while (!optionUpdate.equals("4"));
@@ -127,7 +127,7 @@ public class Main {
                                 VacanteController.deleteVacante();
                                 break;
                             case "3":
-
+                                ContratacionCotroller.deleteContratacion();
                                 break;
                         }
                     }while (!optionDelete.equals("4"));

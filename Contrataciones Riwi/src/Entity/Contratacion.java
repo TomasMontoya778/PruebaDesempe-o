@@ -4,8 +4,8 @@ import java.sql.Timestamp;
 
 public class Contratacion {
     private int id_contratacion;
-    private int id_vacanteFK;
-    private  int id_coderFK;
+    private Vacante id_vacanteFK;
+    private  Coder id_coderFK;
     private Timestamp fecha_aplicacion;
     private String estado;
     private double salario;
@@ -13,7 +13,7 @@ public class Contratacion {
 
     }
 
-    public Contratacion(int id_contratacion, int id_vacanteFK, int id_coderFK, Timestamp fecha_aplicacion, String estado, double salario) {
+    public Contratacion(int id_contratacion, Vacante id_vacanteFK, Coder id_coderFK, Timestamp fecha_aplicacion, String estado, double salario) {
         this.id_contratacion = id_contratacion;
         this.id_vacanteFK = id_vacanteFK;
         this.id_coderFK = id_coderFK;
@@ -30,19 +30,19 @@ public class Contratacion {
         this.id_contratacion = id_contratacion;
     }
 
-    public int getId_vacanteFK() {
+    public Vacante getId_vacanteFK() {
         return id_vacanteFK;
     }
 
-    public void setId_vacanteFK(int id_vacanteFK) {
+    public void setId_vacanteFK(Vacante id_vacanteFK) {
         this.id_vacanteFK = id_vacanteFK;
     }
 
-    public int getId_coderFK() {
+    public Coder getId_coderFK() {
         return id_coderFK;
     }
 
-    public void setId_coderFK(int id_coderFK) {
+    public void setId_coderFK(Coder id_coderFK) {
         this.id_coderFK = id_coderFK;
     }
 

@@ -6,8 +6,7 @@ import Entity.Coder;
 
 import javax.swing.*;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
         String option;
@@ -55,8 +54,9 @@ public class Main {
                                 4. Listar coders por tecnologías manejadas.
                                 5. Listar Vacantes.
                                 6. Listar tecnologías de vacantes.
-                                7. Listar Vacantes por título
-                                8. Salir
+                                7. Listar Vacantes por título.
+                                8. Listar Contrataciones.
+                                9. Salir.
                                 """);
                         switch (optionList) {
                             case "1":
@@ -80,8 +80,11 @@ public class Main {
                             case "7":
                                 VacanteController.listVacantesBytitulo();
                                 break;
+                            case "8":
+                                ContratacionCotroller.listContratacion();
+                                break;
                         }
-                    } while (!optionList.equals("8"));
+                    } while (!optionList.equals("9"));
                     break;
                 case "3":
                     String optionUpdate;
